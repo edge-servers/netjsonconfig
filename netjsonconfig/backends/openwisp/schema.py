@@ -10,7 +10,7 @@ schema = merge_config(
     {
         "properties": {
             "general": {"required": ["hostname"]},
-            # added mainly for backward compatibility with OpenWISP Manager
+            # added mainly for backward compatibility with Immunity Manager
             "tc_options": {
                 "type": "array",
                 "title": "Traffic Control",

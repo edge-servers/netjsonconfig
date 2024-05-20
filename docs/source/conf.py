@@ -35,7 +35,7 @@ from netjsonconfig.version import VERSION, get_version
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
-    'openwisp.sphinx.theme',
+    'immunity.sphinx.theme',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -54,7 +54,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'netjsonconfig'
-copyright = u'{0}, OpenWISP.org'.format(datetime.date.today().year)
+copyright = u'{0}, Immunity.org'.format(datetime.date.today().year)
 author = u'Federico Capoano'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -115,7 +115,7 @@ todo_include_todos = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'openwisp-sphinx-theme'
+html_theme = 'immunity-sphinx-theme'
 html_favicon = 'assets/design/favicon.png'
 html_logo = 'assets/design/netjson-logo-dark.png'
 

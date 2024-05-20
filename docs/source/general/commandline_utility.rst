@@ -11,12 +11,12 @@ Check out the available options yourself with::
     $ netjsonconfig --help
     usage: netjsonconfig [-h] [--config CONFIG]
                      [--templates [TEMPLATES [TEMPLATES ...]]]
-                     [--native NATIVE] --backend {openwrt,openwisp,openvpn}
+                     [--native NATIVE] --backend {openwrt,immunity,openvpn}
                      --method {render,generate,write,validate,json}
                      [--args [ARGS [ARGS ...]]] [--verbose] [--version]
 
     Converts a NetJSON DeviceConfiguration object to native router configurations.
-    Exhaustive documentation is available at: http://netjsonconfig.openwisp.org/
+    Exhaustive documentation is available at: http://netjsonconfig.immunity.org/
 
     optional arguments:
       -h, --help            show this help message and exit
@@ -32,7 +32,7 @@ Check out the available options yourself with::
                             path to native configuration file or archive
 
     output:
-      --backend {openwrt,openwisp,openvpn}, -b {openwrt,openwisp,openvpn}
+      --backend {openwrt,immunity,openvpn}, -b {openwrt,immunity,openvpn}
                             Configuration backend
       --method {render,generate,write,validate,json}, -m {render,generate,write,validate,json}
                             Backend method to use. "render" returns the

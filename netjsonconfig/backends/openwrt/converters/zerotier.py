@@ -15,7 +15,7 @@ class ZeroTier(OpenWrtConverter, BaseZeroTier):
             {
                 '.name': self._get_uci_name(vpn.pop('name')),
                 '.type': 'zerotier',
-                'config_path': vpn.get('config_path', '/etc/openwisp/zerotier'),
+                'config_path': vpn.get('config_path', '/etc/immunity/zerotier'),
                 'copy_config_path': vpn.get('copy_config_path', '1'),
                 'join': [networks.get('id', '') for networks in nwid_ifnames],
                 'enabled': not vpn.pop('disabled', False),
@@ -34,7 +34,7 @@ class ZeroTier(OpenWrtConverter, BaseZeroTier):
         return super().__netjson_vpn(vpn)
 
     def __get_zt_ifname_files(self, vpn, files):
-        config_path = vpn.get('config_path', '/etc/openwisp/zerotier')
+        config_path = vpn.get('config_path', '/etc/immunity/zerotier')
         nwid_ifnames = vpn.get('networks', [])
         zt_file_contents = '# network_id=interface_name\n'
 

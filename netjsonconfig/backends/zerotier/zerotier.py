@@ -20,7 +20,7 @@ class ZeroTier(BaseVpnBackend):
         name='ow_zt',
         networks=None,
         identity_secret='{{secret}}',
-        config_path='/etc/openwisp/zerotier',
+        config_path='/etc/immunity/zerotier',
         disabled=False,
     ):
         networks = networks or []

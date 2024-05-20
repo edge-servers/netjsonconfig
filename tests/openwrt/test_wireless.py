@@ -514,7 +514,7 @@ config wifi-iface 'wifi_wlan0'
     def test_render_interface_disabled(self):
         """
         see issue #35
-        https://github.com/openwisp/netjsonconfig/issues/35
+        https://github.com/edge-servers/netjsonconfig/issues/35
         """
         o = OpenWrt(self._disabled_netjson)
         expected = self._tabs(self._disabled_uci)
@@ -1239,7 +1239,7 @@ config wifi-iface 'wifi_wlan0'
                 "wireless": {
                     "mode": "access_point",
                     "radio": "radio0",
-                    "ssid": "OpenWISP Test",
+                    "ssid": "Immunity Test",
                     "encryption": {"protocol": "none"},
                     "wmm": True,
                     "isolate": True,
@@ -1251,7 +1251,7 @@ config wifi-iface 'wifi_wlan0'
                 "wireless": {
                     "mode": "access_point",
                     "radio": "radio1",
-                    "ssid": "OpenWISP Test",
+                    "ssid": "Immunity Test",
                     "encryption": {"protocol": "none"},
                     "wmm": True,
                     "isolate": True,
@@ -1301,7 +1301,7 @@ config wifi-iface 'wifi_cpwlan0'
     option isolate '1'
     option mode 'ap'
     option network 'cpwifi'
-    option ssid 'OpenWISP Test'
+    option ssid 'Immunity Test'
     option wmm '1'
 
 config wifi-iface 'wifi_cpwlan1'
@@ -1311,7 +1311,7 @@ config wifi-iface 'wifi_cpwlan1'
     option isolate '1'
     option mode 'ap'
     option network 'cpwifi'
-    option ssid 'OpenWISP Test'
+    option ssid 'Immunity Test'
     option wmm '1'
 """
 

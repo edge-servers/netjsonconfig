@@ -15,7 +15,7 @@ class TestBackend(unittest.TestCase, _TabsMixin):
     """
 
     config = {
-        "general": {"hostname": "openwisp-test"},
+        "general": {"hostname": "immunity-test"},
         "interfaces": [
             {"name": "tap0", "type": "virtual"},
             {
@@ -77,7 +77,7 @@ class TestBackend(unittest.TestCase, _TabsMixin):
                 "ns_cert_type": "server",
                 "persist_tun": True,
                 "proto": "tcp-client",
-                "remote": [{"host": "vpn.openwisp.org", "port": 12128}],
+                "remote": [{"host": "vpn.immunity.org", "port": 12128}],
                 "script_security": 1,
                 "tls_client": True,
                 "up": "/tmp/owispmanager/openvpn/vpn_2693_script_up.sh",
@@ -104,7 +104,7 @@ class TestBackend(unittest.TestCase, _TabsMixin):
     }
 
     def test_uci(self):
-        o = OpenWisp({"general": {"hostname": "openwisp-test"}})
+        o = OpenWisp({"general": {"hostname": "immunity-test"}})
         tar = tarfile.open(fileobj=o.generate(), mode='r')
         system = tar.getmember('uci/system.conf')
         contents = tar.extractfile(system).read().decode()
@@ -112,7 +112,7 @@ class TestBackend(unittest.TestCase, _TabsMixin):
             """package system
 
 config 'system' 'system'
-    option 'hostname' 'openwisp-test'
+    option 'hostname' 'immunity-test'
 """
         )
         self.assertEqual(contents, expected)

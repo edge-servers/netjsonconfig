@@ -1,6 +1,6 @@
 import unittest
 
-from openwisp_utils.tests import capture_stdout
+from immunity_utils.tests import capture_stdout
 
 from netjsonconfig import OpenWrt
 from netjsonconfig.utils import _TabsMixin

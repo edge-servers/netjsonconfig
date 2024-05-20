@@ -20,14 +20,14 @@ The first option is to install a tarball:
 
 .. code-block:: shell
 
-    pip install https://github.com/openwisp/netjsonconfig/tarball/master
+    pip install https://github.com/edge-servers/netjsonconfig/tarball/master
 
 The second option is to install via pip using git
 (this will automatically clone the repo and store it on your hard drive):
 
 .. code-block:: shell
 
-    pip install -e git+git://github.com/openwisp/netjsonconfig#egg=netjsonconfig
+    pip install -e git+git://github.com/immunity/netjsonconfig#egg=netjsonconfig
 
 Install git fork for contributing
 ---------------------------------

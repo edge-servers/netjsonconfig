@@ -99,7 +99,7 @@ and third parties can write their own custom backends.
 The current implemented backends are:
 
  * :doc:`OpenWrt </backends/openwrt>`
- * :doc:`OpenWisp </backends/openwisp>` (based on the ``OpenWrt`` backend)
+ * :doc:`OpenWisp </backends/immunity>` (based on the ``OpenWrt`` backend)
  * :doc:`OpenVpn </backends/openvpn>` (custom backend implementing only OpenVPN configuration)
  * :doc:`WireGuard </backends/wireguard>` (custom backend implementing only WireGuard configuration)
  * :doc:`VXLAN over WireGuard </backends/vxlan_over_wireguard>` (custom backend implementing only VXLAN over WireGuard configuration)
@@ -150,7 +150,7 @@ Schema
 
 Each backend has a JSON-Schema, all the backends have a schema which is derived
 from the same parent schema, defined in ``netjsonconfig.backends.schema``
-(`view source <https://github.com/openwisp/netjsonconfig/blob/master/netjsonconfig/schema.py>`_).
+(`view source <https://github.com/edge-servers/netjsonconfig/blob/master/netjsonconfig/schema.py>`_).
 
 Since different backends may support different features each backend may extend its
 schema by adding custom definitions.
@@ -451,8 +451,8 @@ Here's an example from the real world, pay attention to the two variables,
 
     from netjsonconfig import OpenWrt
 
-    openwisp_config_template = {
-        "openwisp": [
+    immunity_config_template = {
+        "immunity": [
             {
                 "config_name": "controller",
                 "config_value": "http",
@@ -471,7 +471,7 @@ Here's an example from the real world, pay attention to the two variables,
     }
 
     router1 = OpenWrt(config={"general": {"hostname": "Router1"}},
-                      templates=[openwisp_config_template],
+                      templates=[immunity_config_template],
                       context=context)
 
 Let's see the result with:
@@ -486,7 +486,7 @@ Let's see the result with:
             option timezone 'UTC'
             option zonename 'UTC'
 
-    package openwisp
+    package immunity
 
     config controller 'http'
             option interval '60'
@@ -511,11 +511,11 @@ If you are interested in this topic you can read more about the
 Support
 -------
 
-See `OpenWISP Support Channels <http://openwisp.org/support.html>`_.
+See `Immunity Support Channels <http://immunity.org/support.html>`_.
 
 License
 -------
 
 This software is licensed under the terms of the GPLv3 license,
 for more information, please see full `LICENSE
-<https://github.com/openwisp/netjsonconfig/blob/master/LICENSE>`_ file.
+<https://github.com/edge-servers/netjsonconfig/blob/master/LICENSE>`_ file.

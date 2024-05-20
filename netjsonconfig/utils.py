@@ -108,7 +108,7 @@ def evaluate_vars(data, context=None):
             var = var.strip()
             # if found multiple variables, create a new regexp pattern for each
             # variable, otherwise different variables would get the same value
-            # (see https://github.com/openwisp/netjsonconfig/issues/55)
+            # (see https://github.com/edge-servers/netjsonconfig/issues/55)
             if len(vars_found) > 1:
                 pattern = r'\{\{(\s*%s\s*)\}\}' % var
             # in case of single variables, use the precompiled

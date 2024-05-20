@@ -72,7 +72,7 @@ $PROGDIR/tc_script.sh start
 mkdir -p $PROGDIR/crontabs
 rm $PROGDIR/crond.pid >/dev/null 2>&1
 echo "Starting Cron"
-start-stop-daemon -m -p /var/run/openwisp_crond.pid -S -b -x crond -- -f -c $PROGDIR/crontabs/ -l 5
+start-stop-daemon -m -p /var/run/immunity_crond.pid -S -b -x crond -- -f -c $PROGDIR/crontabs/ -l 5
 {% endif %}
 
 echo "New configuration now active"

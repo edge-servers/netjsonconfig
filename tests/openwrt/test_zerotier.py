@@ -42,20 +42,20 @@ class TestZeroTier(unittest.TestCase, _TabsMixin):
             """package zerotier
 
 config zerotier 'ow_zt1'
-    option config_path '/etc/openwisp/zerotier'
+    option config_path '/etc/immunity/zerotier'
     option copy_config_path '1'
     option enabled '1'
     list join '9536600adf654321'
 
 config zerotier 'ow_zt2'
-    option config_path '/etc/openwisp/zerotier'
+    option config_path '/etc/immunity/zerotier'
     option copy_config_path '1'
     option enabled '1'
     list join '9536600adf654322'
 
 # ---------- files ---------- #
 
-# path: /etc/openwisp/zerotier/devicemap
+# path: /etc/immunity/zerotier/devicemap
 # mode: 0644
 
 # network_id=interface_name
@@ -104,7 +104,7 @@ config zerotier 'ow_zt2'
             """package zerotier
 
 config zerotier 'ow_zt'
-    option config_path '/etc/openwisp/zerotier'
+    option config_path '/etc/immunity/zerotier'
     option copy_config_path '1'
     option enabled '1'
     list join '9536600adf654321'
@@ -112,7 +112,7 @@ config zerotier 'ow_zt'
 
 # ---------- files ---------- #
 
-# path: /etc/openwisp/zerotier/devicemap
+# path: /etc/immunity/zerotier/devicemap
 # mode: 0644
 
 # network_id=interface_name

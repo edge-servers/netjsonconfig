@@ -34,7 +34,7 @@ See an example of initialization and rendering below:
                 "objtype": "network",
                 "revision": 1,
                 "creationTime": 1632012345,
-                "name": "zerotier-openwisp-network",
+                "name": "zerotier-immunity-network",
                 "private": True,
                 "enableBroadcast": True,
                 "v4AssignMode": {"zt": True},
@@ -45,7 +45,7 @@ See an example of initialization and rendering below:
                 "ipAssignmentPools": [
                     {"ipRangeStart": "10.0.0.10", "ipRangeEnd": "10.0.0.100"}
                 ],
-                "dns": {"domain": "zerotier.openwisp.io", "servers": ["10.147.20.3"]},
+                "dns": {"domain": "zerotier.immunity.io", "servers": ["10.147.20.3"]},
                 "rules": [
                     {
                         "etherType": 2048,
@@ -98,7 +98,7 @@ Will return the following output::
         ],
         "creationTime": 1632012345,
         "dns": {
-            "domain": "zerotier.openwisp.io",
+            "domain": "zerotier.immunity.io",
             "servers": [
                 "10.147.20.3"
             ]
@@ -113,7 +113,7 @@ Will return the following output::
         ],
         "mtu": 2700,
         "multicastLimit": 16,
-        "name": "zerotier-openwisp-network",
+        "name": "zerotier-immunity-network",
         "nwid": "9536600adf654321",
         "objtype": "network",
         "private": true,
@@ -163,7 +163,7 @@ an ``zerotier`` key with a list of dictionaries representing vpn instances.
 The structure of these dictionaries is described below.
 
 Alternatively you may also want to take a look at the `ZeroTier JSON-Schema source code
-<https://github.com/openwisp/netjsonconfig/blob/master/netjsonconfig/backends/zerotier/schema.py>`_.
+<https://github.com/edge-servers/netjsonconfig/blob/master/netjsonconfig/backends/zerotier/schema.py>`_.
 
 According to the `NetJSON <http://netjson.org>`_ spec, any unrecognized property will be ignored.
 
@@ -288,7 +288,7 @@ Required properties:
 |                        |         |                            |                                                                                                           |
 |                        |         |                            | **note:** ensure that the list includes at least one such dictionary                                      |
 +------------------------+---------+----------------------------+-----------------------------------------------------------------------------------------------------------+
-| ``config_path``        | string  | ``/etc/openwisp/zerotier`` | path to the persistent configuration directory                                                            |
+| ``config_path``        | string  | ``/etc/immunity/zerotier`` | path to the persistent configuration directory                                                            |
 +------------------------+---------+----------------------------+-----------------------------------------------------------------------------------------------------------+
 | ``copy_config_path``   | string  | ``'1'``                    | specifies whether to copy the configuration file to RAM                                                   |
 |                        |         |                            |                                                                                                           |
@@ -336,7 +336,7 @@ Will be rendered as:
     package zerotier
 
     config zerotier 'ow_zt'
-        option config_path '/etc/openwisp/zerotier'
+        option config_path '/etc/immunity/zerotier'
         option copy_config_path '1'
         option enabled '1'
         list join '9536600adf654321'
@@ -344,7 +344,7 @@ Will be rendered as:
 
     # ---------- files ---------- #
 
-    # path: /etc/openwisp/zerotier/devicemap
+    # path: /etc/immunity/zerotier/devicemap
     # mode: 0644
 
     # network_id=interface_name
@@ -361,7 +361,7 @@ Useful resources
 ----------------
 
 The default flow rules used in `zerotier/schema.py
-<https://github.com/openwisp/netjsonconfig/blob/master/netjsonconfig/backends/zerotier/schema.py>`_
+<https://github.com/edge-servers/netjsonconfig/blob/master/netjsonconfig/backends/zerotier/schema.py>`_
 for the ZeroTier self-hosted controller are taken from the flow rules mentioned in the documentation below.
 
 - `ZeroTier Controller Network Flow Rules <https://docs.zerotier.com/zerotier/rules/>`_
@@ -380,10 +380,10 @@ If you want to use advanced configuration options that
 apply to your OpenWrt device, such as setting up trusted paths,
 blacklisting physical paths, setting up physical path hints for certain nodes,
 and defining trusted upstream devices, this can be achieved by creating a file named
-``local.conf`` in a persistent filesystem location, such as ``/etc/openwisp/zerotier/local.conf``
+``local.conf`` in a persistent filesystem location, such as ``/etc/immunity/zerotier/local.conf``
 and then adding the ``local_conf`` option to the ZeroTier UCI configuration.
 
-For example, let's create a local configuration file at ``/etc/openwisp/zerotier/local.conf`` (JSON)
+For example, let's create a local configuration file at ``/etc/immunity/zerotier/local.conf`` (JSON)
 to blacklist a specific physical network path **(10.0.0.0/24)** from all ZeroTier traffic.
 
 .. code-block:: json
@@ -406,7 +406,7 @@ Now add ``local_conf`` option to ``/etc/config/zerotier``:
         option enabled '1'
         list join '9536600adf654322'
         option secret '{{secret}}'
-        option local_conf '/etc/openwisp/zerotier/local.conf'
+        option local_conf '/etc/immunity/zerotier/local.conf'
 
 
 **More information**

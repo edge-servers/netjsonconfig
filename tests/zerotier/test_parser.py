@@ -20,7 +20,7 @@ class TestParser(unittest.TestCase):
                 "objtype": "network",
                 "revision": 1,
                 "creationTime": 1632012345,
-                "name": "zerotier-openwisp-network",
+                "name": "zerotier-immunity-network",
                 "private": True,
                 "enableBroadcast": True,
                 "v4AssignMode": {"zt": True},
@@ -31,7 +31,7 @@ class TestParser(unittest.TestCase):
                 "ipAssignmentPools": [
                     {"ipRangeStart": "10.0.0.10", "ipRangeEnd": "10.0.0.100"}
                 ],
-                "dns": {"domain": "zerotier.openwisp.io", "servers": ["10.147.20.3"]},
+                "dns": {"domain": "zerotier.immunity.io", "servers": ["10.147.20.3"]},
                 "rules": [
                     {
                         "etherType": 2048,
@@ -71,7 +71,7 @@ class TestParser(unittest.TestCase):
             "objtype": "network",
             "revision": 1,
             "creationTime": 1632012345,
-            "name": "zerotier-openwisp-network-2",
+            "name": "zerotier-immunity-network-2",
             "private": True,
             "enableBroadcast": True,
             "v4AssignMode": {"zt": True},
@@ -82,7 +82,7 @@ class TestParser(unittest.TestCase):
             "ipAssignmentPools": [
                 {"ipRangeStart": "10.0.0.10", "ipRangeEnd": "10.0.0.100"}
             ],
-            "dns": {"domain": "zerotier.openwisp.io", "servers": ["10.147.20.3"]},
+            "dns": {"domain": "zerotier.immunity.io", "servers": ["10.147.20.3"]},
             "tags": [{"default": 1, "id": 1}],
             "remoteTraceTarget": "7f5d90eb87",
             "remoteTraceLevel": 1,
@@ -117,7 +117,7 @@ class TestParser(unittest.TestCase):
     ],
     "creationTime": 1632012345,
     "dns": {
-        "domain": "zerotier.openwisp.io",  // test
+        "domain": "zerotier.immunity.io",  // test
         "servers": [
             "10.147.20.3"
         ]
@@ -132,7 +132,7 @@ class TestParser(unittest.TestCase):
     ],
     "mtu": 2700,  // test
     "multicastLimit": 16,
-    "name": "zerotier-openwisp-network",
+    "name": "zerotier-immunity-network",
     "nwid": "9536600adf654321",
     "objtype": "network",
     "private": true,
@@ -194,7 +194,7 @@ class TestParser(unittest.TestCase):
     ],
     "creationTime": 1632012345,
     "dns": {
-        "domain": "zerotier.openwisp.io",
+        "domain": "zerotier.immunity.io",
         "servers": [
             "10.147.20.3"
         ]
@@ -209,7 +209,7 @@ class TestParser(unittest.TestCase):
     ],
     "mtu": 2700,
     "multicastLimit": 16,
-    "name": "zerotier-openwisp-network",
+    "name": "zerotier-immunity-network",
     "nwid": "9536600adf654321",
     "objtype": "network",
     "private": true,
@@ -271,7 +271,7 @@ class TestParser(unittest.TestCase):
     ],
     "creationTime": 1632012345,
     "dns": {
-        "domain": "zerotier.openwisp.io",
+        "domain": "zerotier.immunity.io",
         "servers": [
             "10.147.20.3"
         ]
@@ -286,7 +286,7 @@ class TestParser(unittest.TestCase):
     ],
     "mtu": 2700,
     "multicastLimit": 16,
-    "name": "zerotier-openwisp-network",
+    "name": "zerotier-immunity-network",
     "nwid": "9536600adf654321",
     "objtype": "network",
     "private": true,
@@ -331,7 +331,7 @@ class TestParser(unittest.TestCase):
 {
     "creationTime": 1632012345,
     "dns": {
-        "domain": "zerotier.openwisp.io",
+        "domain": "zerotier.immunity.io",
         "servers": [
             "10.147.20.3"
         ]
@@ -346,7 +346,7 @@ class TestParser(unittest.TestCase):
     ],
     "mtu": 2700,
     "multicastLimit": 16,
-    "name": "zerotier-openwisp-network-2",
+    "name": "zerotier-immunity-network-2",
     "nwid": "9536600adf654322",
     "objtype": "network",
     "private": true,
@@ -398,7 +398,7 @@ class TestParser(unittest.TestCase):
     ],
     "creationTime": 1632012345,
     "dns": {
-        "domain": "zerotier.openwisp.io",
+        "domain": "zerotier.immunity.io",
         "servers": [
             "10.147.20.3"
         ]
@@ -413,7 +413,7 @@ class TestParser(unittest.TestCase):
     ],
     "mtu": 2700,
     "multicastLimit": 16,
-    "name": "zerotier-openwisp-network",
+    "name": "zerotier-immunity-network",
     "nwid": "9536600adf654321",
     "objtype": "network",
     "private": true,
@@ -456,7 +456,7 @@ class TestParser(unittest.TestCase):
 {
     "creationTime": 1632012345,
     "dns": {
-        "domain": "zerotier.openwisp.io",
+        "domain": "zerotier.immunity.io",
         "servers": [
             "10.147.20.3"
         ]
@@ -471,7 +471,7 @@ class TestParser(unittest.TestCase):
     ],
     "mtu": 2700,
     "multicastLimit": 16,
-    "name": "zerotier-openwisp-network-2",
+    "name": "zerotier-immunity-network-2",
     "nwid": "9536600adf654322",
     "objtype": "network",
     "private": true,

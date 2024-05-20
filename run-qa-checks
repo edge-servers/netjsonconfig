@@ -3,7 +3,7 @@ set -e
 
 rm -rf docs/_build/
 
-openwisp-qa-check --skip-checkmigrations
+immunity-qa-check --skip-checkmigrations
 
 # test sphinx docs
 mkdir -p docs/source/_static

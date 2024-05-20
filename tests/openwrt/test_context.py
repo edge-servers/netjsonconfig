@@ -45,7 +45,7 @@ class TestContext(unittest.TestCase, _TabsMixin):
 
     def test_context_bug(self):
         """
-        see https://github.com/openwisp/netjsonconfig/issues/55
+        see https://github.com/edge-servers/netjsonconfig/issues/55
         """
         config = {"general": {"hostname": "test-context"}}
         template = {

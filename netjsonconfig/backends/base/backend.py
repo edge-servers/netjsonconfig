@@ -140,7 +140,7 @@ class BaseBackend(object):
         The hostname validation has been taken from jsonschema~=3.2.0
         (jsonschema._format.is_host_name). The newer versions of
         jsonschema enforces FQDN validation which is not always
-        required in OpenWISP. E.g. setting up hostname of a device.
+        required in Immunity. E.g. setting up hostname of a device.
         """
         if not isinstance(value, str):
             return True

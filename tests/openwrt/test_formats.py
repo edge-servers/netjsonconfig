@@ -76,7 +76,7 @@ class TestFormats(unittest.TestCase, _TabsMixin):
             o.validate()
 
     def test_dns_search_hostname(self):
-        o = OpenWrt({"dns_search": ['openwisp.org', 'test.netjson.org']})
+        o = OpenWrt({"dns_search": ['immunity.org', 'test.netjson.org']})
         o.validate()
         # invalid hostname
         o.config['dns_search'].append('very/wrong')

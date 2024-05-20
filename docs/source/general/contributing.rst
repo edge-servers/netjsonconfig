@@ -10,13 +10,13 @@ Follow these guidelines to speed up the process.
    :backlinks: none
    :depth: 3
 
-General contributing guidelines of OpenWISP
+General contributing guidelines of Immunity
 -------------------------------------------
 
 We highly recommend reading the general
-`OpenWISP Contributing Guidelines <https://openwisp.io/docs/developer/contributing.html>`_
+`Immunity Contributing Guidelines <https://immunity.io/docs/developer/contributing.html>`_
 to find out the conventions we use to maintain consistency and quality standards
-across the different OpenWISP modules.
+across the different Immunity modules.
 
 Create a virtual environment
 ----------------------------
@@ -73,12 +73,12 @@ First of all, install the test requirements:
     workon netjsonconfig  # activate virtualenv
     pip install -r requirements-test.txt
 
-Before committing your work, run ``openwisp-qa-format`` to format the code according
-to our `python code conventions <https://openwisp.io/docs/developer/contributing.html#python-code-conventions>`_:
+Before committing your work, run ``immunity-qa-format`` to format the code according
+to our `python code conventions <https://immunity.io/docs/developer/contributing.html#python-code-conventions>`_:
 
 .. code-block:: shell
 
-    openwisp-qa-format
+    immunity-qa-format
 
 Then, you can run the QA checks with:
 
@@ -108,4 +108,4 @@ Send pull request
 -----------------
 
 Now is time to push your changes to github and open a `pull request
-<https://github.com/openwisp/netjsonconfig/pulls>`_!
+<https://github.com/edge-servers/netjsonconfig/pulls>`_!

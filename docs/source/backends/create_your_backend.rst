@@ -56,7 +56,7 @@ to add the ``entry_points`` keyword argument with the following code
 Now your package will be in the list of backends that netjsonconfig can use!
 
 But we still have to give us a name to be unique! Netjsonconfig already
-defined the names ``openwisp``, ``openwrt`` and ``openvpn`` but you can choose
+defined the names ``immunity``, ``openwrt`` and ``openvpn`` but you can choose
 whatever you like most.
 
 The name ``netjsonconfig.backends`` will be associated with a list of classes
@@ -116,12 +116,12 @@ directly from the command line, e.g.
     usage: netjsonconfig [-h] [--config CONFIG]
                      [--templates [TEMPLATES [TEMPLATES ...]]]
                      [--native NATIVE] --backend
-                     {openwrt,openwisp,openvpn,example} --method
+                     {openwrt,immunity,openvpn,example} --method
                      {render,generate,write,validate,json}
                      [--args [ARGS [ARGS ...]]] [--verbose] [--version]
     netjsonconfig: error: the following arguments are required: --backend/-b, --method/-m
 
-Notice the *example* in ``{openwrt,openwisp,openvpn,example}``? That's your backend!
+Notice the *example* in ``{openwrt,immunity,openvpn,example}``? That's your backend!
 
 The name exposed is the one chosen in the *name*, *path*, *class* triple
 from before

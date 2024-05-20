@@ -118,7 +118,7 @@ class Interfaces(OpenWrtConverter):
             static.update(self.__intermediate_address(address))
         if static:
             # do not use CIDR notation when using a single ipv4
-            # see https://github.com/openwisp/netjsonconfig/issues/54
+            # see https://github.com/edge-servers/netjsonconfig/issues/54
             if len(static.get('ipaddr', [])) == 1:
                 network = ip_interface(static['ipaddr'][0])
                 static['ipaddr'] = str(network.ip)
@@ -235,7 +235,7 @@ class Interfaces(OpenWrtConverter):
             # automatically added the "br-" prefix to bridges,
             # but later in OpenWrt 21 the bridge logic changed
             # and that is no longer true, for that reason
-            # old configurations of OpenWISP made for OpenWrt 19
+            # old configurations of Immunity made for OpenWrt 19
             # which relied on the bridge names to be prefixed
             # automatically with "br-" were breaking;
             # to resolve this backward compatibility issue

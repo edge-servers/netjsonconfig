@@ -471,7 +471,7 @@ config wifi-iface 'wifi_wlan0'
     def test_render_interface_disabled(self):
         """
         see issue #35
-        https://github.com/openwisp/netjsonconfig/issues/35
+        https://github.com/edge-servers/netjsonconfig/issues/35
         """
         o = OpenWrt(self._disabled_netjson, dsa=False)
         expected = self._tabs(self._disabled_uci)

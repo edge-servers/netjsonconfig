@@ -41,7 +41,7 @@ The ``OpenWrt`` backend allows to generate OpenWRT compatible configurations.
         ... )
 
     The examples present in this documentation only demonstrates configuration
-    in new syntax. Refer `older documentation versions <https://netjsonconfig.openwisp.org/en/1.0.0a-pre-dsa/backends/openwrt.html>`_
+    in new syntax. Refer `older documentation versions <https://netjsonconfig.immunity.org/en/1.0.0a-pre-dsa/backends/openwrt.html>`_
     to check examples of old syntax.
 
 Initialization
@@ -280,7 +280,7 @@ also supports the following custom options:
 | ``timezone``      | string  | one of the `allowed timezone values`_ (first element of each tuple) |
 +-------------------+---------+---------------------------------------------------------------------+
 
-.. _allowed timezone values: https://github.com/openwisp/netjsonconfig/blob/master/netjsonconfig/backends/openwrt/timezones.py
+.. _allowed timezone values: https://github.com/edge-servers/netjsonconfig/blob/master/netjsonconfig/backends/openwrt/timezones.py
 
 General settings example
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -369,7 +369,7 @@ also supports the following custom options for every type of interface:
         ... )
 
     The examples present in this documentation only demonstrates configuration
-    in new syntax. Refer `older documentation versions <https://netjsonconfig.openwisp.org/en/1.0.0a-pre-dsa/backends/openwrt.html>`_
+    in new syntax. Refer `older documentation versions <https://netjsonconfig.immunity.org/en/1.0.0a-pre-dsa/backends/openwrt.html>`_
     to check examples of old syntax.
 
 In the following sections some examples of the most common use cases are shown.
@@ -463,7 +463,7 @@ dynamic ip address configuration won't get the ``dns`` option in the UCI output,
 
     {
         "dns_servers": ["10.11.12.13", "8.8.8.8"],
-        "dns_search": ["openwisp.org", "netjson.org"],
+        "dns_search": ["immunity.org", "netjson.org"],
         "interfaces": [
             {
                 "name": "eth0",
@@ -504,14 +504,14 @@ Will return the following UCI output::
 
     config interface 'eth0'
             option dns '10.11.12.13 8.8.8.8'
-            option dns_search 'openwisp.org netjson.org'
+            option dns_search 'immunity.org netjson.org'
             option ifname 'eth0'
             option ipaddr '192.168.1.1'
             option netmask '255.255.255.0'
             option proto 'static'
 
     config interface 'eth1'
-            option dns_search 'openwisp.org netjson.org'
+            option dns_search 'immunity.org netjson.org'
             option ifname 'eth1'
             option proto 'dhcp'
 
@@ -556,7 +556,7 @@ Using different protocols
 OpenWRT and LEDE support many protocols (pppoe, pppoa, pptp, l2tp, ecc) and
 the list of supported protocols evolves over time.
 
-OpenWISP and netjsonconfig try to stay out of your way by leaving you maximum
+Immunity and netjsonconfig try to stay out of your way by leaving you maximum
 flexibility to use any protocol and any configuration option you may need,
 just set ``type`` to ``other``, then proceed by setting `proto` and any other
 configuration option according to your needs, see the example below.

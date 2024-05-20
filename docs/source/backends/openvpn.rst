@@ -65,7 +65,7 @@ a list of dictionaries representing vpn instances. The structure of these dictio
 is described below.
 
 Alternatively you may also want to take a look at the `OpenVPN JSON-Schema source code
-<https://github.com/openwisp/netjsonconfig/blob/master/netjsonconfig/backends/openvpn/schema.py>`_.
+<https://github.com/edge-servers/netjsonconfig/blob/master/netjsonconfig/backends/openvpn/schema.py>`_.
 
 According to the `NetJSON <http://netjson.org>`_ spec, any unrecognized property will be ignored.
 
@@ -237,8 +237,8 @@ any property not included in the schema as long as its type is one the following
 For a list of all the OpenVPN configuration settings, refer to the `OpenVPN 2.3 manual
 <https://community.openvpn.net/openvpn/wiki/Openvpn23ManPage>`_.
 
-.. _auth property source code: https://github.com/openwisp/netjsonconfig/blob/master/netjsonconfig/backends/openvpn/schema.py#L79-L89
-.. _cipher property source code: https://github.com/openwisp/netjsonconfig/blob/master/netjsonconfig/backends/openvpn/schema.py#L90-L103
+.. _auth property source code: https://github.com/edge-servers/netjsonconfig/blob/master/netjsonconfig/backends/openvpn/schema.py#L79-L89
+.. _cipher property source code: https://github.com/edge-servers/netjsonconfig/blob/master/netjsonconfig/backends/openvpn/schema.py#L90-L103
 
 Automatic generation of clients
 -------------------------------

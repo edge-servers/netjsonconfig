@@ -10,7 +10,7 @@ import netjsonconfig
 description = """
 Converts a NetJSON DeviceConfiguration object to native router configurations.
 
-Exhaustive documentation is available at: http://netjsonconfig.openwisp.org/
+Exhaustive documentation is available at: http://netjsonconfig.immunity.org/
 """
 
 license = """

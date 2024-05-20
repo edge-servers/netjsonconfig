@@ -1,8 +1,8 @@
 ====================
-OpenWISP 1.x Backend
+Immunity 1.x Backend
 ====================
 
-The OpenWISP 1.x Backend is based on the OpenWRT backend, therefore it inherits all
+The Immunity 1.x Backend is based on the OpenWRT backend, therefore it inherits all
 its features with some differences that are explained in this page.
 
 Generate method
@@ -31,7 +31,7 @@ The ``hostname`` attribute in the ``general`` key is **required**.
 Traffic Control
 ---------------
 
-For backward compatibility with `OpenWISP Manager <https://github.com/openwisp/OpenWISP-Manager>`_
+For backward compatibility with `Immunity Manager <https://github.com/edge-servers/Immunity-Manager>`_
 the schema of the ``OpenWisp`` backend allows to define a ``tc_options`` section that will
 be used to generate ``tc_script.sh``.
 
@@ -158,7 +158,7 @@ Will generate the following ``tc_script.sh``:
         start
     }
 
-Full OpenWISP configuration example
+Full Immunity configuration example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following example shows a full working *configuration dictionary* for the
@@ -168,7 +168,7 @@ The following example shows a full working *configuration dictionary* for the
 
     {
         "general": {
-            "hostname": "OpenWISP"
+            "hostname": "Immunity"
         },
         "interfaces": [
             {
@@ -235,7 +235,7 @@ The following example shows a full working *configuration dictionary* for the
                 "nobind": True,
                 "remote": [
                     {
-                        "host": "vpn.openwisp.org",
+                        "host": "vpn.immunity.org",
                         "port": 12128
                     }
                 ],

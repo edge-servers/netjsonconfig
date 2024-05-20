@@ -16,24 +16,24 @@ Goals
 -----
 
 The main goal of this library is to replace the configuration generation feature
-that is shipped in `OpenWISP Manager <https://github.com/openwisp/OpenWISP-Manager>`_.
+that is shipped in `Immunity Manager <https://github.com/edge-servers/Immunity-Manager>`_.
 
-We have learned a lot from *OpenWISP Manager*, one of the most important lessons we learned
+We have learned a lot from *Immunity Manager*, one of the most important lessons we learned
 is that the configuration generation feature must be a library decoupled from web framework
 specific code (eg Rails, Django), this brings many advantages:
 
- * the project can evolve indipendently from the rest of the OpenWISP modules
+ * the project can evolve indipendently from the rest of the Immunity modules
  * easier to use and integrate in other projects
  * more people can use it and contribute
  * easier maintainance
  * easier to document
 
 Another important goal is to build a tool which is **flexible** and **powerful**.
-We do not want to limit our system to OpenWISP Firmware only, we want to be able
+We do not want to limit our system to Immunity Firmware only, we want to be able
 to control vanilla OpenWRT devices or other OpenWRT based devices too.
 
 We did this by starting out with the :doc:`OpenWrt backend <../backends/openwrt>` first,
-only afterwards we built the :doc:`OpenWisp backend <../backends/openwisp>` on top of it.
+only afterwards we built the :doc:`OpenWisp backend <../backends/immunity>` on top of it.
 
 To summarize, our goals are:
 

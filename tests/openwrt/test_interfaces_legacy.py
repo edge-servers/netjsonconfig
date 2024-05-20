@@ -959,7 +959,7 @@ config interface 'lan'
                     }
                 ],
                 "dns_servers": ["10.11.12.13", "8.8.8.8"],
-                "dns_search": ["netjson.org", "openwisp.org"],
+                "dns_search": ["netjson.org", "immunity.org"],
             },
             dsa=False,
         )
@@ -968,7 +968,7 @@ config interface 'lan'
 
 config interface 'eth0'
     option dns '10.11.12.13 8.8.8.8'
-    option dns_search 'netjson.org openwisp.org'
+    option dns_search 'netjson.org immunity.org'
     option ifname 'eth0'
     option ipaddr '192.168.1.1'
     option netmask '255.255.255.0'
@@ -993,7 +993,7 @@ config interface 'eth0'
             }
         ],
         "dns_servers": ["10.11.12.13", "8.8.8.8"],
-        "dns_search": ["netjson.org", "openwisp.org"],
+        "dns_search": ["netjson.org", "immunity.org"],
     }
 
     def test_parse_dns(self):
@@ -1002,7 +1002,7 @@ config interface 'eth0'
 
 config interface 'eth0'
     option dns '10.11.12.13 8.8.8.8'
-    option dns_search 'netjson.org openwisp.org'
+    option dns_search 'netjson.org immunity.org'
     option ifname 'eth0'
     option ipaddr '192.168.1.1'
     option netmask '255.255.255.0'
@@ -1020,7 +1020,7 @@ config interface 'eth0'
     list dns '10.11.12.13'
     list dns '8.8.8.8'
     list dns_search 'netjson.org'
-    list dns_search 'openwisp.org'
+    list dns_search 'immunity.org'
     option ifname 'eth0'
     option ipaddr '192.168.1.1'
     option netmask '255.255.255.0'
@@ -1041,7 +1041,7 @@ config interface 'eth0'
                     }
                 ],
                 "dns_servers": ["10.11.12.13", "8.8.8.8"],
-                "dns_search": ["netjson.org", "openwisp.org"],
+                "dns_search": ["netjson.org", "immunity.org"],
             },
             dsa=False,
         )
@@ -1049,7 +1049,7 @@ config interface 'eth0'
             """package network
 
 config interface 'eth0'
-    option dns_search 'netjson.org openwisp.org'
+    option dns_search 'netjson.org immunity.org'
     option ifname 'eth0'
     option proto 'dhcp'
 """
@@ -1067,7 +1067,7 @@ config interface 'eth0'
                     }
                 ],
                 "dns_servers": ["10.11.12.13", "8.8.8.8"],
-                "dns_search": ["netjson.org", "openwisp.org"],
+                "dns_search": ["netjson.org", "immunity.org"],
             },
             dsa=False,
         )
@@ -1075,7 +1075,7 @@ config interface 'eth0'
             """package network
 
 config interface 'eth0'
-    option dns_search 'netjson.org openwisp.org'
+    option dns_search 'netjson.org immunity.org'
     option ifname 'eth0'
     option proto 'dhcpv6'
 """
@@ -1087,7 +1087,7 @@ config interface 'eth0'
             {
                 "interfaces": [{"name": "eth0", "type": "ethernet"}],
                 "dns_servers": ["10.11.12.13", "8.8.8.8"],
-                "dns_search": ["netjson.org", "openwisp.org"],
+                "dns_search": ["netjson.org", "immunity.org"],
             },
             dsa=False,
         )
@@ -1406,7 +1406,7 @@ config interface 'eth0'
                     {
                         "name": "eth0",
                         "type": "ethernet",
-                        "dns_search": ["openwisp.org", "netjson.org"],
+                        "dns_search": ["immunity.org", "netjson.org"],
                     }
                 ],
                 "dns_search": ["domain.com"],
@@ -1417,7 +1417,7 @@ config interface 'eth0'
             """package network
 
 config interface 'eth0'
-    list dns_search 'openwisp.org'
+    list dns_search 'immunity.org'
     list dns_search 'netjson.org'
     option ifname 'eth0'
     option proto 'none'
@@ -1557,7 +1557,7 @@ config interface 'eth0'
 
     def test_interface_disabled_bug(self):
         """
-        see https://github.com/openwisp/netjsonconfig/issues/57
+        see https://github.com/edge-servers/netjsonconfig/issues/57
         """
         o = OpenWrt(
             {"interfaces": [{"type": "ethernet", "name": "eth0", "disabled": False}]},

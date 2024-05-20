@@ -81,7 +81,7 @@ a list of dictionaries representing vpn instances. The structure of these dictio
 is described below.
 
 Alternatively you may also want to take a look at the `WireGuard JSON-Schema source code
-<https://github.com/openwisp/netjsonconfig/blob/wireguard-vxlan/netjsonconfig/backends/wireguard/schema.py>`_.
+<https://github.com/edge-servers/netjsonconfig/blob/wireguard-vxlan/netjsonconfig/backends/wireguard/schema.py>`_.
 
 According to the `NetJSON <http://netjson.org>`_ spec, any unrecognized property will be ignored.
 

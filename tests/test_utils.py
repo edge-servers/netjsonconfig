@@ -90,7 +90,7 @@ class TestUtils(unittest.TestCase):
 
     def test_evaluate_vars_multiple_newline(self):
         """
-        see https://github.com/openwisp/netjsonconfig/issues/55
+        see https://github.com/edge-servers/netjsonconfig/issues/55
         """
         output = evaluate_vars('{{ a }}\n{{ b }}\n', {'a': 'a', 'b': 'b'})
         self.assertEqual(output, 'a\nb\n')

@@ -9,7 +9,7 @@ from .schema import schema
 
 class OpenWisp(OpenWrt):
     """
-    OpenWISP 1.x Firmware (legacy) Configuration Backend
+    Immunity 1.x Firmware (legacy) Configuration Backend
     """
 
     schema = schema
@@ -34,10 +34,10 @@ class OpenWisp(OpenWrt):
             radio.setdefault('disabled', False)
 
     def _render_template(self, template, context=None):
-        openwisp_env = Environment(
+        immunity_env = Environment(
             loader=PackageLoader(self.__module__, 'templates'), trim_blocks=True
         )
-        template = openwisp_env.get_template(template)
+        template = immunity_env.get_template(template)
         context = context or {}
         return template.render(**context)
 

@@ -26,9 +26,9 @@ wifi
 
 {% if cron %}
 echo "Stopping Cron"
-start-stop-daemon -p /var/run/openwisp_crond.pid -K
+start-stop-daemon -p /var/run/immunity_crond.pid -K
 rm -rf  $PROGDIR/crontabs/
-rm /var/run/openwisp_crond.pid
+rm /var/run/immunity_crond.pid
 {% endif %}
 
 echo "Configuration un-installed"
