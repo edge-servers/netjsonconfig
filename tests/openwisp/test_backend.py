@@ -4,14 +4,16 @@ from copy import deepcopy
 from hashlib import md5
 from time import sleep
 
-from netjsonconfig import OpenWisp
+from netjsonconfig import Immunity
+
 from netjsonconfig.exceptions import ValidationError
 from netjsonconfig.utils import _TabsMixin
 
 
 class TestBackend(unittest.TestCase, _TabsMixin):
     """
-    tests for OpenWisp backend
+    tests for Immunity
+ backend
     """
 
     config = {
@@ -104,7 +106,8 @@ class TestBackend(unittest.TestCase, _TabsMixin):
     }
 
     def test_uci(self):
-        o = OpenWisp({"general": {"hostname": "immunity-test"}})
+        o = Immunity
+({"general": {"hostname": "immunity-test"}})
         tar = tarfile.open(fileobj=o.generate(), mode='r')
         system = tar.getmember('uci/system.conf')
         contents = tar.extractfile(system).read().decode()
@@ -119,13 +122,15 @@ config 'system' 'system'
         tar.close()
 
     def test_hostname_required(self):
-        o = OpenWisp({"general": {"timezone": "UTC"}})
+        o = Immunity
+({"general": {"timezone": "UTC"}})
         with self.assertRaises(ValidationError):
             o.validate()
 
     def test_install_script(self):
         config = deepcopy(self.config)
-        o = OpenWisp(config)
+        o = Immunity
+(config)
         tar = tarfile.open(fileobj=o.generate(), mode='r')
         install = tar.getmember('install.sh')
         contents = tar.extractfile(install).read().decode()
@@ -141,7 +146,8 @@ config 'system' 'system'
     def test_ensure_tun_vpn_ignored(self):
         config = deepcopy(self.config)
         config['openvpn'][0]['dev_type'] = 'tun'
-        o = OpenWisp(config)
+        o = Immunity
+(config)
         tar = tarfile.open(fileobj=o.generate(), mode='r')
         install = tar.getmember('install.sh')
         contents = tar.extractfile(install).read().decode()
@@ -150,7 +156,8 @@ config 'system' 'system'
 
     def test_uninstall_script(self):
         config = deepcopy(self.config)
-        o = OpenWisp(config)
+        o = Immunity
+(config)
         tar = tarfile.open(fileobj=o.generate(), mode='r')
         uninstall = tar.getmember('uninstall.sh')
         contents = tar.extractfile(uninstall).read().decode()
@@ -162,7 +169,8 @@ config 'system' 'system'
 
     def test_up_and_down_scripts(self):
         config = deepcopy(self.config)
-        o = OpenWisp(config)
+        o = Immunity
+(config)
         tar = tarfile.open(fileobj=o.generate(), mode='r')
         up = tar.getmember('openvpn/vpn_2693_script_up.sh')
         contents = tar.extractfile(up).read().decode()
@@ -175,18 +183,21 @@ config 'system' 'system'
         tar.close()
 
     def test_double_generation(self):
-        o = OpenWisp(self.config)
+        o = Immunity
+(self.config)
         o.generate()
         o.generate()
 
     def test_wireless_radio_disabled_0(self):
-        o = OpenWisp({'radios': self.config['radios']})
+        o = Immunity
+({'radios': self.config['radios']})
         output = o.render()
         self.assertIn("option 'disabled' '0'", output)
 
     def test_tc_script(self):
         config = deepcopy(self.config)
-        o = OpenWisp(config)
+        o = Immunity
+(config)
         tar = tarfile.open(fileobj=o.generate(), mode='r')
         tc = tar.getmember('tc_script.sh')
         contents = tar.extractfile(tc).read().decode()
@@ -218,7 +229,8 @@ config 'system' 'system'
                 "contents": "* * * * * echo 'test' > /tmp/test-cron",
             }
         ]
-        o = OpenWisp(config)
+        o = Immunity
+(config)
         tar = tarfile.open(fileobj=o.generate(), mode='r')
         install = tar.getmember('install.sh')
         contents = tar.extractfile(install).read().decode()
@@ -230,7 +242,8 @@ config 'system' 'system'
 
     def test_checksum(self):
         """ensures checksum of same config doesn't change"""
-        o = OpenWisp({"general": {"hostname": "test"}})
+        o = Immunity
+({"general": {"hostname": "test"}})
         # md5 is good enough and won't slow down test execution too much
         checksum1 = md5(o.generate().getvalue()).hexdigest()
         sleep(1)
@@ -238,5 +251,6 @@ config 'system' 'system'
         self.assertEqual(checksum1, checksum2)
 
     def test_default_dsa(self):
-        o = OpenWisp({"general": {"hostname": "test"}})
+        o = Immunity
+({"general": {"hostname": "test"}})
         self.assertEqual(o.dsa, False)

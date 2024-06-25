@@ -1,5 +1,6 @@
 """
-OpenWisp specific JSON-Schema definition
+Immunity
+ specific JSON-Schema definition
 (extends OpenWrt JSON-Schema)
 """
 from ...utils import merge_config

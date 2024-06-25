@@ -33,7 +33,8 @@ We do not want to limit our system to Immunity Firmware only, we want to be able
 to control vanilla OpenWRT devices or other OpenWRT based devices too.
 
 We did this by starting out with the :doc:`OpenWrt backend <../backends/openwrt>` first,
-only afterwards we built the :doc:`OpenWisp backend <../backends/immunity>` on top of it.
+only afterwards we built the :doc:`Immunity
+ backend <../backends/immunity>` on top of it.
 
 To summarize, our goals are:
 

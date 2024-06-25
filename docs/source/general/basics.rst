@@ -99,7 +99,8 @@ and third parties can write their own custom backends.
 The current implemented backends are:
 
  * :doc:`OpenWrt </backends/openwrt>`
- * :doc:`OpenWisp </backends/immunity>` (based on the ``OpenWrt`` backend)
+ * :doc:`Immunity
+ </backends/immunity>` (based on the ``OpenWrt`` backend)
  * :doc:`OpenVpn </backends/openvpn>` (custom backend implementing only OpenVPN configuration)
  * :doc:`WireGuard </backends/wireguard>` (custom backend implementing only WireGuard configuration)
  * :doc:`VXLAN over WireGuard </backends/vxlan_over_wireguard>` (custom backend implementing only VXLAN over WireGuard configuration)

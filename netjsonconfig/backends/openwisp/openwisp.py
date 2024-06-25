@@ -7,7 +7,8 @@ from .renderer import OpenWrtRenderer
 from .schema import schema
 
 
-class OpenWisp(OpenWrt):
+class Immunity
+(OpenWrt):
     """
     Immunity 1.x Firmware (legacy) Configuration Backend
     """
@@ -26,7 +27,8 @@ class OpenWisp(OpenWrt):
 
     def _sanitize_radios(self):
         """
-        OpenWisp 1.x requires the following explicit entry
+        Immunity
+ 1.x requires the following explicit entry
         in the radio sections of /uci/wireless.conf:
             option disabled '0'
         """

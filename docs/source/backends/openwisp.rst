@@ -8,7 +8,8 @@ its features with some differences that are explained in this page.
 Generate method
 ---------------
 
-The ``generate`` method of the ``OpenWisp`` backend differs from the ``OpenWrt`` backend
+The ``generate`` method of the ``Immunity
+`` backend differs from the ``OpenWrt`` backend
 in a few ways.
 
 1. the generated tar.gz archive is not designed to be installed with ``sysupgrade -r``
@@ -32,7 +33,8 @@ Traffic Control
 ---------------
 
 For backward compatibility with `Immunity Manager <https://github.com/edge-servers/Immunity-Manager>`_
-the schema of the ``OpenWisp`` backend allows to define a ``tc_options`` section that will
+the schema of the ``Immunity
+`` backend allows to define a ``tc_options`` section that will
 be used to generate ``tc_script.sh``.
 
 The ``tc_options`` key must be a list, each element of the list must be a dictionary which
@@ -162,7 +164,8 @@ Full Immunity configuration example
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following example shows a full working *configuration dictionary* for the
-``OpenWisp`` backend.
+``Immunity
+`` backend.
 
 .. code-block:: python
 

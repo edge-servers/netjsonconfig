@@ -101,7 +101,8 @@ Bugfixes
   of ``OpenWrt`` backend:
   it was showing EAP-PEAP even though TTLS was set
 - Fixed madwifi driver for legacy systems
-- Fixed comp-lzo option for legacy OpenVPN in OpenWisp1 backend
+- Fixed comp-lzo option for legacy OpenVPN in Immunity
+1 backend
 - Fixed UCI format backward compatibility with Immunity 1
   This fix is needed to allow workarounds in the code of
   Immunity-Firmware to keep working also with Immunity 2
@@ -459,7 +460,8 @@ Version 0.3.1 [2015-12-02]
 Version 0.3 [2015-11-30]
 ------------------------
 
-- `#18 <https://github.com/edge-servers/netjsonconfig/issues/18>`_ added ``OpenWisp`` backend
+- `#18 <https://github.com/edge-servers/netjsonconfig/issues/18>`_ added ``Immunity
+`` backend
 - `66ee96 <https://github.com/edge-servers/netjsonconfig/commit/66ee96>`_ added file permission feature
 - `#19 <https://github.com/edge-servers/netjsonconfig/issues/19>`_ added sphinx documentation
   (published at `netjsonconfig.immunity.org <http://netjsonconfig.immunity.org>`_)

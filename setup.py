@@ -47,7 +47,8 @@ def get_install_requires():
 description = (
     'Netjsonconfig is a python library that converts NetJSON DeviceConfiguration '
     'objects into real router configurations that can be installed on systems like '
-    'OpenWRT or OpenWisp Firmware.'
+    'OpenWRT or Immunity
+ Firmware.'
 )
 
 setup(

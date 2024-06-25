@@ -36,12 +36,14 @@ configuration engine of `Immunity 2 <https://github.com/edge-servers/ansible-imm
 **netjsonconfig** is a python library that converts `NetJSON <http://netjson.org>`_
 *DeviceConfiguration* objects into real router configurations that can be installed
 on systems like `OpenWRT <http://openwrt.org>`_,
-or `OpenWisp Firmware <https://github.com/edge-servers/Immunity-Firmware>`_.
+or `Immunity
+ Firmware <https://github.com/edge-servers/Immunity-Firmware>`_.
 
 Its main features are listed below for your reference:
 
 * `OpenWRT <http://openwrt.org>`_ / `LEDE <https://www.lede-project.org/>`_ support
-* `OpenWisp Firmware <https://github.com/edge-servers/Immunity-Firmware>`_ support
+* `Immunity
+ Firmware <https://github.com/edge-servers/Immunity-Firmware>`_ support
 * `OpenVPN <https://openvpn.net>`_ support
 * `WireGuard <https://www.wireguard.com/>`_ support
 * `ZeroTier <https://www.zerotier.com/>`_ support
